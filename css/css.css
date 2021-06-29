@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ /* style for header */
+ #dropdownMenuButton1{
+    color: #5aaafa;
+ }
+ header .row{
+     align-items: center;
+     padding: 8px 0;
+     border-bottom: 1px solid rgb(219, 219, 219);
+ }
+ .dropdown{
+    text-align: right;
+ }
+ .dropdown-item>i{
+     padding-right: 6px;
+ }
+ .dropdown-menu{
+     line-height: 0em;
+ }
+  header{
+     background-color: #f8f8f8;
+ }
+
+ /* style for aside */
+ aside{
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0 !important;
+    border-right: 1px solid #ccc;
+ }
+ aside .d-flex{
+     padding: 15px;
+     border-bottom: 1px solid #ccc;
+ }
+ aside .d-flex .btn{
+     border: 1px solid #ccc;
+ }
+aside .nav-link{
+    color: #6b96bb;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+aside .nav-link i{
+    margin-right: 3px;
+}
+
+/* style for main/edit profile */
+.row main{
+    padding: 25px;
+}
+.row main hr{
+    border: 1px solid #ccc;
+}
+
+.form-edit-profile{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 !important;
+}
+main .row .col-8{
+    margin-top: 10px;
+}
+main .row .col-12{
+    margin: 10px 0;
+}
+.form-header{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    padding: 8px ;
+}
+main .row .my-btn{
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* style for table - view content */
+.my-wrap-table{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.row .table{
+    border: 1px solid #ccc;
+    margin: 20px;
+    /* max-width: fit-content; */
+    width: auto;
+}
+tbody>tr:nth-child(odd){
+    background-color: #f9f9f9;
+}
+.row .table th{
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.row .table td{
+    border: 1px solid #ccc;
+}
+
