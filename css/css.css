@@ -61,6 +61,10 @@ aside .nav-link i{
     border-radius: 3px;
     margin: 0 !important;
 }
+.form-edit-profile .error{
+    color: red;
+    font-size: 0.8em;
+}
 main .row .col-8{
     margin-top: 10px;
 }

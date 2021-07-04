@@ -46,30 +46,63 @@
             <main class="col-12 col-lg-9">
                 <h2>Add Content</h2>
                 <hr/>
-                <form class="row form-edit-profile">
+                <form class="row form-edit-profile" action="#" method="POST" onsubmit="return validate()">
                     <div class="form-header">
                         <h6>Content Form Elements</h6>
                     </div>
+                    <!-- Title -->
                     <div class="col-12 col-lg-8">
                       <label for="inputTitle" class="form-label"><b>Title</b></label>
-                      <input type="text" class="form-control" id="inputTitle" placeholder="Enter the title">
+                      <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Enter the title">
+                      <div class="error" id="error-inputTitle"></div>
                     </div>
+                     <!-- Brief -->
                     <div class="col-12 col-lg-8">
                       <label for="inputBrief" class="form-label"><b>Brief</b></label>
-                      <textarea class="form-control" id="inputBrief" rows="3"></textarea>
+                      <textarea class="form-control" name="brief" id="inputBrief" rows="3"></textarea>
+                      <div class="error" id="error-inputBrief"></div>
                     </div>
+                     <!-- Content -->
                     <div class="col-12 col-lg-8">
                         <label for="elements-content" class="form-label"><b>Content</b></label>
-                        <textarea class="form-control" id="elements-content" rows="5"></textarea>
+                        <textarea class="form-control" name="content" id="elements-content" rows="5"></textarea>
+                        <div class="error" id="error-elements-content"></div>
                       </div>
                     <div class="col-12">
-                      <button type="submit" class="btn my-btn">Submit Button</button>
-                      <button type="reset" class="btn my-btn">Reset Button</button>
+                      <button type="submit" name="submit" class="btn my-btn">Submit Button</button>
+                      <button type="reset" name="reset" class="btn my-btn">Reset Button</button>
                     </div>
                   </form>
             </main>
         </div>
     </div>
+    <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="js/validate.js"></script> -->
+    <script>
+      function validate(){
+        let isValid = true;
+        // variables - add_content
+        const title = document.getElementById('inputTitle').value;
+        const brief = document.getElementById('inputBrief').value;
+        const contents = document.getElementById('elements-content').value;
+
+        // validate - add_content
+        if(title.length < 10 || title < 200){
+            document.getElementById('error-inputTitle').innerText = 'Title must be has length 10 - 200';
+            isValid = false;
+        }
+
+        if(brief.length < 30 || brief.length > 150){
+            document.getElementById('error-inputBrief').innerText = 'Brief must be has length 30 - 150';
+            isValid = false;
+        }
+
+        if(contents.length < 50 || contents.length > 1000){
+          document.getElementById('error-elements-content').innerText = 'Contents must be has length 50 - 1000';
+        }
+        return isValid;
+      }
+    </script>
 </body>
 </html>
